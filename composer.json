@@ -1,0 +1,41 @@
+{
+  "name": "flipbox/mapper",
+  "description": "Object Mapper",
+  "version": "1.0.0",
+  "keywords": [
+    "mapper"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Flipbox Factory",
+      "email": "hello@flipboxfactory.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "flipbox/skeleton": "~1.0.0",
+    "flipbox/http": "~1.0.0",
+    "flipbox/relay": "~1.0.0",
+    "respect/validation": "^1.0.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Flipbox\\Mapper\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/FlipboxFactory/Skeleton.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/FlipboxFactory/Relay.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/FlipboxFactory/Http.git"
+    }
+  ]
+}
