@@ -191,7 +191,7 @@ abstract class AbstractObject extends CommonAbstractObject implements IteratorAg
      * @param array $attributes
      * @return FieldInterface[]
      */
-    protected function getFieldAliasDefinition(array $attributes = [])
+    public function getFieldAliasDefinition(array $attributes = [])
     {
         return ArrayHelper::matches(
             $attributes,
@@ -209,7 +209,7 @@ abstract class AbstractObject extends CommonAbstractObject implements IteratorAg
      * @param array $attributes
      * @return RelationshipInterface[]
      */
-    protected function getChildRelationshipAliasDefinition(array $attributes = [])
+    public function getChildRelationshipAliasDefinition(array $attributes = [])
     {
         return ArrayHelper::matches(
             $attributes,
@@ -227,7 +227,7 @@ abstract class AbstractObject extends CommonAbstractObject implements IteratorAg
      * @param array $attributes
      * @return RelationshipInterface[]
      */
-    protected function getParentRelationshipAliasDefinition(array $attributes = [])
+    public function getParentRelationshipAliasDefinition(array $attributes = [])
     {
         return ArrayHelper::matches(
             $attributes,

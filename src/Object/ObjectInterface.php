@@ -14,6 +14,8 @@
 
 namespace Flipbox\Mapper\Object;
 
+use Flipbox\Mapper\Fields\Common\FieldInterface;
+use Flipbox\Mapper\Relationships\RelationshipInterface;
 use Flipbox\Skeleton\Error\ErrorInterface;
 use Traversable;
 
@@ -49,6 +51,30 @@ interface ObjectInterface extends Traversable, ErrorInterface
      * @return mixed
      */
     public function getAliasDefinition(array $attributes = []);
+
+    /**
+     * An array of attribute name => alias definitions
+     *
+     * @param array $attributes
+     * @return FieldInterface[]
+     */
+    public function getFieldAliasDefinition(array $attributes = []);
+
+    /**
+     * An array of attribute name => alias definitions
+     *
+     * @param array $attributes
+     * @return RelationshipInterface[]
+     */
+    public function getChildRelationshipAliasDefinition(array $attributes = []);
+
+    /**
+     * An array of attribute name => alias definitions
+     *
+     * @param array $attributes
+     * @return RelationshipInterface[]
+     */
+    public function getParentRelationshipAliasDefinition(array $attributes = []);
 
     /**
      * Validate the model
